@@ -73,7 +73,7 @@ module scrambler_top (
     // which the scrambled byte (8 parallel bits) appears on data_out_final.
     wire active_en_gated = Upstream_Downstream ? lfsr_en_up_gated : lfsr_en_dn_gated;
 
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk or negedge rst) begin
         if (rst) begin
             scrambler_done <= 1'b0;
         end else begin
