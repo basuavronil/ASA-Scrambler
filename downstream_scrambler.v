@@ -46,7 +46,7 @@ module lfsr_downstream_8p (
     integer i;
 
     always @(posedge clk) begin
-        if (rst) begin
+        if (!rst) begin
             for (i = 0; i < 8; i = i + 1) begin
                 lfsr[i] <= (seed[i] == 23'd0) ? 23'd1 : seed[i];
             end
