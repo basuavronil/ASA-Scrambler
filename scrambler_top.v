@@ -73,7 +73,7 @@ module scrambler_top (
 
     // Output Handshake Logic (Parallel Byte Processed)
     always @(posedge clk or negedge rst) begin
-        if (rst) begin
+        if (!rst) begin
             scrambler_done  <= 1'b0;
             scrambler_ready <= 1'b0;
         end else begin
