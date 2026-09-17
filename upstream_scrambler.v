@@ -1,8 +1,7 @@
 module lfsr_upstream_8p (
     input  wire          clk,
     input  wire          rst,
-    input  wire          Dnstr_en,    
-    input  wire [2:0]    Spg,         
+    input  wire          Dnstr_en,            
     input  wire [1:0]    link_id,
     input  wire [7:0]    data_in,     
     output wire [7:0]    data_out,    
