@@ -40,7 +40,6 @@ module scrambler_top (
         .clk       (clk),
         .rst       (rst),
         .Dnstr_en  (lfsr_en_up_gated),
-        .Spg       (Spg),
         .link_id   (link_id),
         .data_in   (data_in),
         .data_out  (data_out_up),
